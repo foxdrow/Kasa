@@ -18,8 +18,6 @@ const Header = (props) => {
           to="/about"
           exact
           className="nav_link"
-          // if the path is exactly /about, the class nav_link--active will be added
-        //   activeClassName="nav_link--active"
         >
           About
         </NavLink>

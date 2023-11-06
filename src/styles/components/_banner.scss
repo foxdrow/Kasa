@@ -1,0 +1,39 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background: no-repeat center/cover;
+  border-radius: 25px;
+  position: relative;
+  @media (max-width: 768px) {
+    height: 300px;
+  }
+  @media (max-width: 480px) {
+    height: 111px;
+  }
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+  }
+  p {
+    z-index: 9;
+    color: #fff;
+    font-size: 4.8rem;
+    padding: 0 16px;
+    @media (max-width: 768px) {
+      font-size: 4rem;
+    }
+    @media (max-width: 480px) {
+      font-size: 2.4rem;
+      white-space: break-word;
+    }
+  }
+}
