@@ -1,8 +1,9 @@
+import MainContainer from "../layouts/MainContainer";
 const Home = () => {
   return (
-    <div>
+    <MainContainer>
       <h1>Home</h1>
-    </div>
+    </MainContainer>
   );
 };
 export default Home;

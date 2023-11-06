@@ -1,5 +1,5 @@
-import Logo from '../assets/images/logo.svg';
-import { Link } from 'react-router-dom';
+import Logo from "../assets/images/logo.svg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -9,7 +9,6 @@ const Header = () => {
         <Link to="/">Accueil</Link>
         <Link to="/about">A propos</Link>
       </nav>
-      <h1>Header</h1>
     </header>
   );
 };
