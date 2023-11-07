@@ -9,16 +9,12 @@ const Header = (props) => {
         <NavLink
           className="nav_link"
           to="/"
-          exact
-        //   activeClassName="nav_link--active"
+          exact="true"
+          //   activeClassName="nav_link--active"
         >
           Accueil
         </NavLink>
-        <NavLink
-          to="/about"
-          exact
-          className="nav_link"
-        >
+        <NavLink to="/about" exact="true" className="nav_link">
           About
         </NavLink>
       </nav>
