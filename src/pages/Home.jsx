@@ -1,14 +1,18 @@
-import Banner from "../components/Banner";
+import Banner from "../components/Banner/Banner";
 import MainContainer from "../layouts/MainContainer";
 import HomeBanner from "../assets/images/home_back.png";
-import Housing from "../components/Housing";
+import Housing from "../components/Housing/Housing";
 import housings from "../assets/data/housings.json";
 
 const Home = () => {
   return (
-    <MainContainer>
+    <MainContainer className="home">
       <Banner image={HomeBanner} description="Chez vous, partout et ailleurs" />
-      <Housing type="card" housing={housings[0]} />
+      <section className="home-housings">
+        {housings.map((housing) => (
+          <Housing housing={housing} />
+        ))}
+      </section>
     </MainContainer>
   );
 };

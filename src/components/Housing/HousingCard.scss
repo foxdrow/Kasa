@@ -1,0 +1,58 @@
+$color-primary: #ff6060;
+.housing-card {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+  height: 34rem;
+  width: 34rem;
+  min-width: 34rem;
+  max-width: 34rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  object-fit: cover;
+  position: relative;
+  justify-content: flex-end;
+  @media (max-width: 900px) {
+    height: 20rem;
+    width: 70%;
+    min-width: 70%;
+    max-width: 70%;
+  }
+  @media (max-width: 550px) {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 34rem;
+    width: 34rem;
+    border-radius: 10px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+    @media (max-width: 900px) {
+      height: 20rem;
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+    }
+  }
+  &_title {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding: 1rem;
+    z-index: 9;
+    margin-bottom: 2rem;
+    height: 5rem;
+  }
+}

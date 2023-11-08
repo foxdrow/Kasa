@@ -1,0 +1,22 @@
+.home {
+  &-housings {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 6rem;
+    border-radius: 25px;
+    background: #f6f6f6;
+    padding: 4rem 4rem;
+    margin: 4.5rem 0;
+    @media (max-width: 1240px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2.2rem;
+      margin: 2.2rem 0;
+      background: none;
+      padding: 0;
+    }
+  }
+}

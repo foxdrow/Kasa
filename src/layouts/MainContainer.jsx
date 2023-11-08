@@ -1,14 +1,15 @@
 import Header from "./Header";
 import Footer from "./Footer";
-const MainContainer = ({ children }) => {
+const MainContainer = (props) => {
+  const { children, className } = props;
   return (
-    <>
-      <div className="main-container">
+    <div className={className}>
+      <div className={"main-container"}>
         <Header />
         {children}
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 export default MainContainer;
