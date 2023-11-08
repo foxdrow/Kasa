@@ -7,10 +7,9 @@ const Header = (props) => {
       <img src={Logo} alt="logo" />
       <nav>
         <NavLink
-          className="nav_link"
           to="/"
           exact="true"
-          //   activeClassName="nav_link--active"
+          className={({ isActive }) => "nav_link" + (isActive ? " active" : "")}
         >
           Accueil
         </NavLink>

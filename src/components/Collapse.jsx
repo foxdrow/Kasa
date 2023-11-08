@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 const Collapse = ({ children, isOpen, size }) => {
   const [height, setHeight] = useState(0);
   const contentRef = useRef(null);
