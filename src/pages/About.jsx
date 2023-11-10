@@ -1,8 +1,12 @@
 import MainContainer from "../layouts/MainContainer";
+import Banner from "../components/Banner/Banner";
+import AboutImage from "../assets/images/About_banner.png";
+import Collapse from "../components/Collapse/Collapse";
 const About = () => {
   return (
     <MainContainer>
-      <h1>About</h1>
+      <Banner image={AboutImage} />
+      <Collapse title="Title" content={["content",'test1']}/>
     </MainContainer>
   );
 };
