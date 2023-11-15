@@ -1,27 +1,26 @@
 .carrousel {
-    height: 41.5rem;
-    border-radius: 2.5rem;
+  height: 41.5rem;
+  border-radius: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: no-repeat center/cover;
+  &__arrow-container {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    background-size: cover;
-    background-position: center;
-    &__arrow-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 2rem;
-        height: 100%;
-        margin-top: 2rem;
-    }
-    &__arrow {
-        cursor: pointer;
-    }
-    &__counter {
-        color: #fff;
-        font-size: 1.8rem;
-        font-weight: 500;
-        align-self: center;
-        margin-bottom: 2rem;
-    }
+    align-items: center;
+    padding: 0 2rem;
+    height: 100%;
+    margin-top: 2rem;
+  }
+  &__arrow {
+    cursor: pointer;
+  }
+  &__counter {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 500;
+    align-self: center;
+    margin-bottom: 2rem;
+  }
 }

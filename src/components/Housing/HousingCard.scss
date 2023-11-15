@@ -2,8 +2,7 @@ $color-primary: #ff6060;
 .housing-card {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  background-size: cover;
-  background-position: center;
+  background: no-repeat center/cover;
   &:hover {
     transform: scale(1.1);
   }
