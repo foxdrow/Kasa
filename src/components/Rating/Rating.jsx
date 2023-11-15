@@ -6,11 +6,8 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 const Rating = ({ rating }) => {
   const [width, setWidth] = useState(window.innerWidth);
   useEffect(() => {
-    const handleWindowResize = () => setWidth(window.innerWidth);
-    window.addEventListener("resize", handleWindowResize);
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
   }, []);
-  let mediaQuery = window.matchMedia("(max-width: 700px)");
-
   const numberOfStars = parseInt(rating);
   const starsComponents = () => {
     const stars = [];
@@ -19,7 +16,7 @@ const Rating = ({ rating }) => {
         <FontAwesomeIcon
           key={i}
           icon={faStar}
-          size={mediaQuery.matches ? "sm" : "lg"}
+          size={width < 700 ? "sm" : "lg"}
           style={{ color: "#FF6060" }}
         />
       );
@@ -29,7 +26,7 @@ const Rating = ({ rating }) => {
         <FontAwesomeIcon
           key={i + numberOfStars}
           icon={faStar}
-          size={mediaQuery.matches ? "sm" : "lg"}
+          size={width < 700 ? "sm" : "lg"}
           className="empty"
           style={{ color: "#E3E3E3" }}
         />
