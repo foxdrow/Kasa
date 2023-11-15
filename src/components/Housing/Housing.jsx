@@ -1,5 +1,5 @@
-import HousingCard from "./HousingCard";
-import HousingFull from "./HousingFull";
+import HousingCard from "./HousingCard/HousingCard";
+import HousingFull from "./HousingFull/HousingFull";
 const Housing = (props) => {
   const { type = "card" } = props;
   return (

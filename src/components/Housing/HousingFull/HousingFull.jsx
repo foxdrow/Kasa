@@ -1,7 +1,11 @@
 import "./HousingFull.scss";
-import Carrousel from "../Carrousel/Carrousel";
+import Carrousel from "../../Carrousel/Carrousel";
+import Rating from "../../Rating/Rating";
+import Collapse from "../../Collapse/Collapse";
+
 const HousingFull = ({ housing }) => {
-  const { id, title, description, location, host, tags, rating } = housing;
+  const { title, description, location, host, tags, rating, equipments } =
+    housing;
   return (
     <div className="housing-full">
       <Carrousel housing={housing} />
@@ -22,8 +26,12 @@ const HousingFull = ({ housing }) => {
           ))}
         </div>
         <div className="housing-full__characteristics__rating">
-          <p>{rating}</p>
+          <Rating rating={rating} />
         </div>
+      </div>
+      <div className="housing-full__overview">
+        <Collapse title="Description" content={description} />
+        <Collapse title="Équipements" content={equipments} />
       </div>
     </div>
   );

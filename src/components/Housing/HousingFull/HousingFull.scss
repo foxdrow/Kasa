@@ -1,0 +1,59 @@
+.housing-full {
+    &__header {
+        display: flex;
+        color: #FF6060;
+        justify-content: space-between;
+        align-items: center;
+        margin: 3rem 0 2.5rem 0;
+        &__title {
+            h2 {
+                font-size: 3.6rem;
+                font-weight: 400;
+            }
+            p {
+                font-size: 1.8rem;
+            }
+        }
+        &__host {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            img {
+                width: 6.4rem;
+                height: 6.4rem;
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: center;
+            }
+            p {
+                font-size: 1.8rem;
+                width: 9rem;
+                text-align: end;
+                text-wrap: wrap;
+            }
+        }
+    }
+    &__characteristics {
+        display: flex;
+        justify-content: space-between;
+        &__tags {
+            display: flex;
+            gap: 1rem;
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.4rem;
+                border-radius: 10px;
+                background-color: #FF6060;
+                color: #fff;
+                width: 11.5rem;
+            }
+        }
+    }
+    &__overview {
+        display: flex;
+        gap: 7.6rem;
+        margin: 2.5rem 0 5rem 0;
+    }
+}
