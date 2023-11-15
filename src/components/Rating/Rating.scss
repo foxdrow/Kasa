@@ -1,4 +1,7 @@
 .rating {
     display: flex;
     gap: 1rem;
+    @media (max-width: 900px) {
+        gap: 0.5rem;
+    }
 }

@@ -1,8 +1,16 @@
+import { useState, useEffect } from "react";
 import "./Rating.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const Rating = ({ rating }) => {
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleWindowResize);
+  }, []);
+  let mediaQuery = window.matchMedia("(max-width: 700px)");
+
   const numberOfStars = parseInt(rating);
   const starsComponents = () => {
     const stars = [];
@@ -11,7 +19,7 @@ const Rating = ({ rating }) => {
         <FontAwesomeIcon
           key={i}
           icon={faStar}
-          size="lg"
+          size={mediaQuery.matches ? "sm" : "lg"}
           style={{ color: "#FF6060" }}
         />
       );
@@ -21,7 +29,7 @@ const Rating = ({ rating }) => {
         <FontAwesomeIcon
           key={i + numberOfStars}
           icon={faStar}
-          size="lg"
+          size={mediaQuery.matches ? "sm" : "lg"}
           className="empty"
           style={{ color: "#E3E3E3" }}
         />

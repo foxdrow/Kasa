@@ -5,6 +5,9 @@
   flex-direction: column;
   justify-content: space-between;
   background: no-repeat center/cover;
+  @media (max-width: 800px) {
+    height: 25.5rem;
+  }
   &__arrow-container {
     display: flex;
     justify-content: space-between;
@@ -15,6 +18,9 @@
   }
   &__arrow {
     cursor: pointer;
+    @media (max-width: 800px) {
+      height: 2.5rem;
+    }
   }
   &__counter {
     color: #fff;
@@ -22,5 +28,8 @@
     font-weight: 500;
     align-self: center;
     margin-bottom: 2rem;
+    @media (max-width: 800px) {
+      display: none;
+    }
   }
 }
