@@ -14,7 +14,7 @@ const Header = (props) => {
           Accueil
         </NavLink>
         <NavLink to="/about" exact="true" className="nav_link">
-          About
+          A propos
         </NavLink>
       </nav>
     </header>
